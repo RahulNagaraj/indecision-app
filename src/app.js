@@ -29,10 +29,10 @@ const renderIndecisionApp = () => {
       <h1>{app.title}</h1>
       {app.subTitle && <p>{app.subTitle}</p>}
       <p>{(app.options && app.options.length > 0) ? 'Here are your options' : 'No options'}</p>
-      <p>{app.options.length}</p>
       <ol>
-        <li>Item 1</li>
-        <li>Item 2</li>
+        {
+          app.options.map((option, i) => <li key={i}>{option}</li>)
+        }
       </ol>
       <form onSubmit={onFormSubmit}>
         <input type="text" name="option"/>

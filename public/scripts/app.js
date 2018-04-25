@@ -45,23 +45,15 @@ var renderIndecisionApp = function renderIndecisionApp() {
       app.options && app.options.length > 0 ? 'Here are your options' : 'No options'
     ),
     React.createElement(
-      'p',
-      null,
-      app.options.length
-    ),
-    React.createElement(
       'ol',
       null,
-      React.createElement(
-        'li',
-        null,
-        'Item 1'
-      ),
-      React.createElement(
-        'li',
-        null,
-        'Item 2'
-      )
+      app.options.map(function (option, i) {
+        return React.createElement(
+          'li',
+          { key: i },
+          option
+        );
+      })
     ),
     React.createElement(
       'form',
