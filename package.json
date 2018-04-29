@@ -27,6 +27,7 @@
     "live-server": "^1.2.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-modal": "^3.4.4",
     "validator": "^9.4.1",
     "webpack": "^4.6.0",
     "webpack-dev-server": "^3.1.3"
